@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>
+	<style>
+		footer {
+			background-color:#aacdd7;
+			padding: 30px;
+			text-align: center;
+			color: white;
+			}
+			
+			.web-cam video 
+		    {
+            width:250px;
+            height:250px;
+            position: absolute; top: 450px; right:150px;
+            }	
+	</style>
+</head>
+<html>
+<meta charset="utf-8">
+<title>Dream BMI Centre</title>
+<link rel="stylesheet" href="navbar.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--- ----header--->
+<body>
+    <div class="contain">
+        <div class="navbar">
+            <ul>  
+                <li class="active">
+                <a href="index.html"><i class="fa fa-home"></i>Main Page</a></li>
+                <li><a href="HealthInfo.html"><i class="fa fa-book"></i>Health Info</a>
+                <div class="sub-navbar-1">
+                    <ul>
+                        <li><a href="menu.html">Menu Diet</a></li>
+                        <li><a href="workout.html">Workout</a></li>
+                        <li><a href="calories.html">Calorie Deficit</a></li>
+                    </ul>
+                </div>
+                <li><a href="profile.html"><i class="fa fa-address-card"></i>About Us</a></li> 
+                    <div class="sub-navbar-4"></div>
+                </li>
+            </ul>
+        </div>
+	</div>	
+    <!------ header------>
+
+    <!------ header------>
+    <style>
+    .body
+    {background-image:url('1.png');
+   
+    }
+    h1
+    { margin-top:30px;
+    font-family: "Lucida Handwriting",cursive;
+    }
+    </style>  
+</body>
+<body>
+	<script language="JavaScript">
+		<!--
+		function calculateBmi() 
+		{
+			var weight = document.bmiForm.weight.value
+			var height = document.bmiForm.height.value
+			if(weight > 0 && height > 0)
+			{	
+			    var finalBmi = weight/(height/100*height/100)
+			    document.bmiForm.bmi.value = finalBmi
+			    if(finalBmi < 18.4)
+				{
+			        document.bmiForm.meaning.value = "Malnutrition Risk."
+			    }
+			    if(finalBmi > 18.5 && finalBmi < 24.9)
+				{
+			        document.bmiForm.meaning.value = "Low Risk."
+			    }
+			    if(finalBmi > 25 && finalBmi < 29.9)
+				{
+			        document.bmiForm.meaning.value = "Enchanced Risk."
+			    }
+			    if(finalBmi > 30 && finalBmi < 34.9)
+				{
+	          		document.bmiForm.meaning.value = "Medium Risk."
+	     		}
+	    		if(finalBmi > 35 && finalBmi < 39.9)
+				{
+	        		document.bmiForm.meaning.value = "High Risk."
+		    	}
+		    	if(finalBmi > 40)
+				{
+		        	document.bmiForm.meaning.value = "Very High Risk."
+		     	}
+			}
+			else
+			{
+			    alert("Please fill in everything correctly.")
+			}
+		}
+		//-->
+	</script>	
+	
+	<h1><center>Dream BMI Centre</center></h1>
+		<form name="bmiForm">
+		<fieldset>
+		<legend style="font-weight:bold;">BMI CALCULATOR:</legend>
+			<br> Your Weight(kg): <input type="text" name="weight" size="10"><br><br />
+			Your Height(cm): <input type="text" name="height" size="10"><br />
+			<br> <input type="button" value="Calculate BMI" onClick="calculateBmi()"><br><br />
+			<br> Your BMI: <input type="text" name="bmi" size="10"><br><br />
+			Health Risk: <input type="text" name="meaning" size="25"><br />
+			<br> <input type="reset" value="Reset" />
+			</fieldset><br>
+		</form>
+		
+	    <section>
+		    <div class="web-cam">
+	    	<video controls style = "width:350px; height:300px;">
+	    	<source src="BMI.mp4" type="video/mp4">
+    		<source src="BMI.ogg" type="video/ogg">
+    		If you are reading this, it is because your browser does not support the video element.
+    		</video>
+	    	</div>	
+            <h1>BODY MASS INDEX (BMI) CALCULATOR</h1>
+            <p>The Body Mass Index or BMI, measures the human body shape based on your weight (kg) and height (cm).</p><br>
+	    	
+			<h3>Features:</h3>
+	    	<p>
+                <li>Calculate your BMI</li>
+            </p><br>
+		
+		    <h3>How to Use:</h3>
+	    	<p>
+	    	    <ol>
+                    <li>Enter your weight, in Kilograms.</li>
+		            <li>Enter your height, in Centimeters.</li>
+	        	</ol>
+            </p><br>
+		
+		    <h3>BMI Category:</h3>
+		    <p>
+                <li>Less than 18.4 – Underweight</li>
+                <li>From 18.5.0 to 24.9 – Normal weight</li>
+                <li>From 25 to 29.9 – Overweight</li>
+         		<li>From 30 to 34.9 – Moderately obese</li>
+         		<li>From 35 to 39.9 – Severely obese</li>
+           		<li>More than 40 – Very Severely obese</li>
+            </p><br>
+	
+	       	<a href="https://www.medicalnewstoday.com/articles/323622">For More Info Click Here<image src="click.png" width=4%></a>
+		</section><br>
+	
+		<footer>
+				<p><B>Copyright © 2022 InstaFit. All Rights Reserved </B></p>
+		</footer>	
+</body>
+</html>
