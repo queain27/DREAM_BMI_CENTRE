@@ -12,7 +12,7 @@
 		    {
             width:250px;
             height:250px;
-            position: absolute; top: 450px; right:150px;
+            position: absolute; top: 600px; right:100px;
             }	
 	</style>
 </head>
@@ -56,7 +56,7 @@
     }
     </style>  
 </body>
-<body>
+<body><center>
 	<script language="JavaScript">
 		<!--
 		function calculateBmi() 
@@ -66,30 +66,37 @@
 			if(weight > 0 && height > 0)
 			{	
 			    var finalBmi = weight/(height/100*height/100)
-			    document.bmiForm.bmi.value = finalBmi
+			    document.bmiForm.bmi.value = finalBmi.toFixed(2);
+
 			    if(finalBmi < 18.4)
-				{
+				{   
+					document.bmiForm.categoring.value = "Underweight"
 			        document.bmiForm.meaning.value = "Malnutrition Risk."
 			    }
 			    if(finalBmi > 18.5 && finalBmi < 24.9)
-				{
-			        document.bmiForm.meaning.value = "Low Risk."
+				{   
+					document.bmiForm.categoring.value = "Normal weight"
+			        document.bmiForm.meaning.value = "Low Risk"
 			    }
 			    if(finalBmi > 25 && finalBmi < 29.9)
-				{
-			        document.bmiForm.meaning.value = "Enchanced Risk."
+				{   
+					document.bmiForm.categoring.value = "Overweight"
+			        document.bmiForm.meaning.value = "Enchanced Risk"
 			    }
 			    if(finalBmi > 30 && finalBmi < 34.9)
 				{
-	          		document.bmiForm.meaning.value = "Medium Risk."
+	          		document.bmiForm.categoring.value = "Moderately obese"
+	          		document.bmiForm.meaning.value = "Medium Risk"
 	     		}
 	    		if(finalBmi > 35 && finalBmi < 39.9)
 				{
-	        		document.bmiForm.meaning.value = "High Risk."
+	        		document.bmiForm.categoring.value = "Severely obese"
+	        		document.bmiForm.meaning.value = "High Risk"
 		    	}
 		    	if(finalBmi > 40)
 				{
-		        	document.bmiForm.meaning.value = "Very High Risk."
+		        	document.bmiForm.categoring.value = "Very severely obese"
+		        	document.bmiForm.meaning.value = "Very High Risk"
 		     	}
 			}
 			else
@@ -103,12 +110,16 @@
 	<h1><center>Dream BMI Centre</center></h1>
 		<form name="bmiForm">
 		<fieldset>
-		<legend style="font-weight:bold;">BMI CALCULATOR:</legend>
+		<legend style="font-weight:bold;">BMI CALCULATOR: </legend>
 			<br> Your Weight(kg): <input type="text" name="weight" size="10"><br><br />
 			Your Height(cm): <input type="text" name="height" size="10"><br />
 			<br> <input type="button" value="Calculate BMI" onClick="calculateBmi()"><br><br />
 			<br> Your BMI: <input type="text" name="bmi" size="10"><br><br />
-			Health Risk: <input type="text" name="meaning" size="25"><br />
+
+			<br>Category BMI: <input type="text" name="categoring" size="25"><br/>
+
+			<br>Health Risk: <input type="text" name="meaning" size="25"><br />
+
 			<br> <input type="reset" value="Reset" />
 			</fieldset><br>
 		</form>
@@ -145,7 +156,7 @@
          		<li>From 30 to 34.9 – Moderately obese</li>
          		<li>From 35 to 39.9 – Severely obese</li>
            		<li>More than 40 – Very Severely obese</li>
-            </p><br>
+            </p><br></center>
 	
 	       	<a href="https://www.medicalnewstoday.com/articles/323622">For More Info Click Here<image src="click.png" width=4%></a>
 		</section><br>
