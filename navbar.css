@@ -8,7 +8,6 @@ body
 {  
    background-position:center;
    box-sizing: border-box;
-  background-color: rgb(238,174,202);
  background: linear-gradient(90deg, rgba(161, 123, 182, 0.8)30%, rgba(159, 234, 226, 0.8) 50%);
 
 }
@@ -19,7 +18,7 @@ body
 padding-left: 20px;
 padding-right: 20px;}
 
-
+/*------------navbar center--------*/
 .navbar
 {
   text-align:center;
@@ -34,11 +33,14 @@ padding-right: 20px;}
   margin:15px;
   padding:15px; 
 }
+/*------------tulisan gray untuk link--------*/
 a{
-	text-decoration: none;
-	color:#555;
-	font-size:20px;
+  text-decoration: none;
+  color:#555;
+  font-size:20px;
 }
+
+/*------------tulisan black taskbar--------*/
 p{ color: #555;
 }
 .navbar ul li a
@@ -57,6 +59,7 @@ color:#000000;
 { display:none;
   
 }  
+/*------------list health info size,colour--------*/
 .navbar ul li:hover .sub-navbar-1
 { display:block;
 position:absolute;
@@ -64,6 +67,7 @@ background:#B2D9EA;
 margin-top: 15px;
 margin-left:-15px;
 }
+/*------------narvar dalam list menegak--------*/
 .navbar ul li:hover .sub-navbar-1 ul
 {display:block;
  margin:10px;
@@ -76,10 +80,4 @@ margin-left:-15px;
   border-radius:0;
   text-align:left;
 }
-.navbar ul li:hover .sub-navbar-1 ul li:last-child
-{ border-bottom:none;
-}
-.navbar ul li:hover .sub-navbar-1 ul li a:hover
-{ color: #b2ff00;
-}
-/*------------navbar--------*/
+/*------------list health info size,colour--------*/
